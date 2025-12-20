@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your City</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{url_for('static',filename='styles.css')}}"
+    />
+  </head>
+  <style>
+    body {
+      color: white;
+      background-image: url("{{url_for('static',filename='images/fog.webp')}}");
+    }
+    .container {
+      position: absolute;
+      top: 25%;
+      right: 20px;
+    }
+    .btc {
+      width: 200px;
+      height: 50px;
+    }
+  </style>
+  <body>
+    <h1>{{content}}</h1>
+    <div class="container">
+      <div class="box-left">
+        <label>City: <span>{{cityname}}</span></label>
+        <label
+          >Forcast: <span>{{forcast}}</span
+          ><span><img src="https:/{{icon}}" alt="icon" /></span
+        ></label>
+        <span>{{degree}}C</span>
+        <span>{{time}}</span>
+        <button class="btc">
+          <a href="{{url_for('landingpage')}}">Search Another City</a>
+        </button>
+      </div>
+    </div>
+    <script>
+      let weather = "{{forcast}}";
+      let cloud = [
+        "mist",
+        "fog",
+        "haze",
+        "cloudy",
+        "overcast",
+        "partly cloudy",
+      ];
+      let sunny = ["sunny", "clear", "clear sky"];
+      let rainy = [
+        "rain",
+        "light rain",
+        "moderate rain",
+        "heavy rain",
+        "showers",
+        "Light freezing rain",
+        "Patchy light rain",
+        "Heavy rain at times",
+        "Moderate or heavy rain shower",
+        "Torrential rain shower",
+      ];
+      let thunder = [
+        "thunderstorm",
+        "lightning",
+        "thunder",
+        "thundery outbreaks possible",
+      ];
+      let snow = ["snow", "light snow", "heavy snow", "sleet", "blizzard"];
+      if (rainy.includes(weather.toLowerCase())) {
+        document.body.style.backgroundImage =
+          "url('{{url_for('static',filename='images/rain.webp')}}')";
+      } else if (cloud.includes(weather.toLowerCase())) {
+        document.body.style.backgroundImage =
+          "url('{{url_for('static',filename='images/fog.webp')}}')";
+      } else if (sunny.includes(weather.toLowerCase())) {
+        document.body.style.backgroundImage =
+          "url('{{url_for('static',filename='images/sunny.jpeg')}}')";
+      } else if (thunder.includes(weather.toLowerCase())) {
+        document.body.style.backgroundImage =
+          "url('{{url_for('static',filename='images/thunder.avif')}}')";
+      } else if (snow.includes(weather.toLowerCase())) {
+        document.body.style.backgroundImage =
+          "url('{{url_for('static',filename='images/snow.jpeg')}}')";
+      }
+    </script>
+  </body>
+</html>

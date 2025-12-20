@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{{url_for('static',filename='styles.css')}}" />
+    <title>Landing Page</title>
+  </head>
+  <body>
+    <style>
+      body{
+        background-image: url("{{url_for('static',filename='images/weatherbg.jpg')}}");
+      }
+      .container{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: white;
+      box-shadow: 0px 0px 10px 0px black;
+      }
+
+    </style>
+    <h1>{{content}}</h1>
+    <div class="container">
+      <form>
+        <input
+          type="text"
+          name="cityname"
+          placeholder="Enter City"
+          required
+        /><br />
+        <div class="btnalign">
+          <button class="btc" type="reset">Reset</button>
+          <button
+            class="btn"
+            formmethod="post"
+            formaction="{{url_for('fetchapi')}}"
+            type="submit"
+          >
+            Continue
+          </button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
