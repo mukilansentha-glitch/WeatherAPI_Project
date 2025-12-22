@@ -1,15 +1,15 @@
 # WeatherAPI_Project
 
-I build this project focus on Clean, Simple and Dynamic weather wallpaper,as the result gives me what i focus on🤞. This project shows how is my analytical skills and how i manage to work with API especially GET, POST methods. I'm Thanking Python web library "Flask" is help me to build this project.
-I attached some screenshots in below repo to look for you
-weatherapi/screeshots
+I built this project focus on Clean, Simple, and Dynamic weather wallpaper, as the result gives me what I focus on🤞. This project shows how is my analytical skills and how I manage to work with API, especially GET, POST methods. I'm thankful that the Python web library "Flask" has helped me to build this project.
 
-To access weatherAPI, you need "API_KEY" and "URL" to fecth the required data for this I use https://www.weatherapi.com/ or you can use some other Open source weather APIs.
+I attached some screenshots in the repo below to look for you
+weatherapi/screenshots
 
-Note: This open source WeatherAPI url is deactivated after one month which free trail ends so kindly
-wisely as per needs.
+To access weatherAPI, you need "API_KEY" and "URL" to fetch the required data. For this, I use https://www.weatherapi.com/, or you can use some other open-source weather APIs.
 
-Tech Stack: HTML, CSS, Javascript, Python, Flask, request
+Note: This open source WeatherAPI URL is deactivated after one month, which free trial ends so kindly choose wisely as per your needs.
+
+Tech Stack: HTML, CSS, JavaScript, Python, Flask, request
 
 
 
