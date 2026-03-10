@@ -33,4 +33,4 @@ def fetchapi():
         return render_template("error.html",errmsg=errmsg)
 
 if __name__=="__main__":
-    app.run(debug=True,port=3200)
+    app.run(host="0.0.0.0", port=3200, debug=True)
